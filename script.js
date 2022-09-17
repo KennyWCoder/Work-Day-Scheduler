@@ -10,16 +10,8 @@ setInterval(clock, 1000);
 
 var buttonEl = $(".saveBtn");
 var DescripEl = $(".description");
-
-var nine = $("#9");
-var ten = $("#10");
-var eleven = $("#11");
-var twevle = $("#12");
-var one = $("#1");
-var two = $("#2");
-var three = $("#3");
-var four = $("#4");
-var five = $("#5");
+var task = $(this).siblings(".description").val();
+var time = $(this).parent().attr("id");
 
 //check the time to change the background color
 function checkTime() {
@@ -35,33 +27,32 @@ function checkTime() {
 
         if (currentTime > timeBlock) {
             $(this).addClass("past");
-        }else if (currentTime === timeBlock){
+        } else if (currentTime === timeBlock) {
             $(this).addClass("present");
             $(this).children("textarea").text("Current Time");
-        }else {
+        } else {
             $(this).addClass("future");
         }
     })
 }
 
-$(document).ready(function(){
-    $(".saveBtn").on("click", function(){
+$(document).ready(function () {
+    $(".saveBtn").on("click", function () {
         //getting sibling element which is descripton/textarea and turn it into value so we can store the valuable into localstorage.
-        var task = $(this).siblings(".description").val();
-        var time = $(this).parent().attr("id");
+
         localStorage.setItem(time, task);
     })
 })
-// function saveDescription() {
-// for(i = 9; i < 17; i++){
-//     var showDetail = $("#9 .description").val(localStorage.getItem("9"));
-//     return showDetail;
-// }
-// }
 
-// $(".description").each(function () {
+//save description using a loop
+function saveDescription() {
+    for (var i = 9; i <= 17; i++) {
+        $(`#${i} .description`).val(localStorage.getItem(`${i}`));
+    }
+}
 
 checkTime();
+saveDescription();
 
 
 
