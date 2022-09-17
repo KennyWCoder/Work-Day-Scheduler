@@ -10,8 +10,6 @@ setInterval(clock, 1000);
 
 var buttonEl = $(".saveBtn");
 var DescripEl = $(".description");
-var task = $(this).siblings(".description").val();
-var time = $(this).parent().attr("id");
 
 //check the time to change the background color
 function checkTime() {
@@ -39,7 +37,8 @@ function checkTime() {
 $(document).ready(function () {
     $(".saveBtn").on("click", function () {
         //getting sibling element which is descripton/textarea and turn it into value so we can store the valuable into localstorage.
-
+        var task = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
         localStorage.setItem(time, task);
     })
 })
