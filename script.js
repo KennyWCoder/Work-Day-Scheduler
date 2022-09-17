@@ -1,6 +1,16 @@
 //set clock
 $("#currentDay").html(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
 
+//set clear button
+$(document).ready(function() {
+    $("#clear-btn").append('<button class="btn-styled" type="button">Press me</button>');
+});
+
+$("#clear-btn").on("click", function(){
+    localStorage.clear();
+    location.reload();
+})
+
 //function to make clock ticking
 function clock() {
     $("#currentDay").html(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
