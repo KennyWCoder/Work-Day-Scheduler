@@ -3,7 +3,7 @@ $("#currentDay").html(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
 
 //set clear button
 $(document).ready(function() {
-    $("#clear-btn").append('<button class="btn-styled" type="button">Press me</button>');
+    $("#clear-btn").append('<button class="btn btn-primary btn-lg" type="button">Clear Schedule</button>');
 });
 
 $("#clear-btn").on("click", function(){
