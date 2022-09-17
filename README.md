@@ -10,7 +10,7 @@ N/A
 
 ## Preview of the Website
 
-<img width="1440" alt="Screen Shot 2022-09-08 at 7 08 02 PM" src="https://user-images.githubusercontent.com/97656734/189257419-03ff8aa9-9ffc-4406-97a1-4fb8d2a16c3f.png">
+<img width="1440" alt="Screen Shot 2022-09-17 at 12 37 16 AM" src="https://user-images.githubusercontent.com/97656734/190846120-b7e64f71-9b59-4179-9d6b-236d96a87f0f.png">
 
 ## Link to the Website
 
